@@ -2,6 +2,8 @@
 
 Its a Tic Tac Toe game made with Kivy. The computer moves works with the help of `Minimax` algorithm.
 
+![screen](img\Capture.PNG)
+
 ### Kivy Installation
 
 ```
@@ -10,7 +12,7 @@ python -m pip install kivy[base] kivy_examples
 
 ### Credits
 
-**Since repository contains other scripts, I didn't forked the repo. However giving credits below for original author: **
+**Since repository contains other scripts, I didn't forked the repo. However giving credits below for original author:**
 
 [soumys567](https://github.com/soumyas567/Python_Projects/blob/main/Tic%20Tac%20Toe/tictactoeai.py)
 
