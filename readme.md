@@ -12,7 +12,7 @@ python -m pip install kivy[base] kivy_examples
 
 [soumys567](https://github.com/soumyas567/Python_Projects/blob/main/Tic%20Tac%20Toe/tictactoeai.py)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/I6zp8B4J6iw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+![video](https://www.youtube.com/watch?v=I6zp8B4J6iw)
 
 ### Known Issues
 
