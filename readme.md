@@ -2,7 +2,7 @@
 
 Its a Tic Tac Toe game made with Kivy. The computer moves works with the help of `Minimax` algorithm.
 
-![screen](img\Capture.PNG)
+![screen](img/Capture.PNG)
 
 ### Kivy Installation
 
