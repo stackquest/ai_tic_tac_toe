@@ -1,0 +1,134 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<SquareButton@Button>:
+    height: 65
+    size_hint_y: None
+    width: 65
+    font_size: 22
+    size_hint_x: None
+    background_normal: ''
+    background_color: 1, 1, 1, 1
+    border: 1, 1, 1, 1
+    color: hex('#000000')
+    canvas.before:
+        Color:
+            rgba: hex('#000000')
+        Line:
+            width: 1.3
+            rectangle: self.x, self.y, self.width, self.height
+
+<HomePage>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: hex('#87bfed')
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: '100dp'
+            canvas.before:
+                Color:
+                    rgba: hex('#87bfed')
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        BoxLayout:
+            orientation: 'horizontal'
+            canvas.before:
+                Color:
+                    rgba: hex('#87bfed')
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            BoxLayout:
+                orientation: 'horizontal'
+                canvas.before:
+                    Color:
+                        rgba: hex('#87bfed')
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            BoxLayout:
+                orientation: 'vertical'
+                canvas.before:
+                    Color:
+                        rgba: hex('#87bfed')
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                Label:
+                    text: 'TIC TAC TOE'
+                    font_size: 18
+                    size_hint_y: None
+                    height: '40dp'
+                GridLayout:
+                    cols: 3
+                    rows: 3
+                    SquareButton:
+                        id: cell_1
+                        on_press: root.gui_human_move('cell_1')
+                    SquareButton:
+                        id: cell_2
+                        on_press: root.gui_human_move('cell_2')
+                    SquareButton:
+                        id: cell_3
+                        on_press: root.gui_human_move('cell_3')
+                    SquareButton:
+                        id: cell_4
+                        on_press: root.gui_human_move('cell_4')
+                    SquareButton:
+                        id: cell_5
+                        on_press: root.gui_human_move('cell_5')
+                    SquareButton:
+                        id: cell_6
+                        on_press: root.gui_human_move('cell_6')
+                    SquareButton:
+                        id: cell_7
+                        on_press: root.gui_human_move('cell_7')
+                    SquareButton:
+                        id: cell_8
+                        on_press: root.gui_human_move('cell_8')
+                    SquareButton:
+                        id: cell_9
+                        on_press: root.gui_human_move('cell_9')
+                Label:
+                    id: info
+                    markup: True
+                    font_size: 18
+            BoxLayout:
+                orientation: 'horizontal'
+                canvas.before:
+                    Color:
+                        rgba: hex('#87bfed')
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: '100dp'
+            canvas.before:
+                Color:
+                    rgba: hex('#87bfed')
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            AnchorLayout:
+                anchor_x: 'center'
+                anchor_y: 'center'
+                Button:
+                    id: play_again
+                    text: 'Play Again'
+                    opacity: 0
+                    size_hint_x: None
+                    width: '100dp'
+                    size_hint_y: None
+                    height: '48dp'
+                    background_normal: ''
+                    background_color: hex('#ff0000')
+                    on_press: root.refresh()
