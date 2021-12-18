@@ -2,6 +2,7 @@ from kivy.app import App
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.config import Config
 from .logic import *
+# from .logic_v2 import *
 
 
 Config.set('graphics', 'width', '600')

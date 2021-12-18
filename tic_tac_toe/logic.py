@@ -6,10 +6,12 @@ COLORS = {
 }
 board = [' '] * 10
 COMPUTER, HUMAN = 'X', 'O'
+cache_dict = {}
 
 def clear_board():
-    global board
+    global board, cache_dict
     board = [' '] * 10
+    cache_dict = {}
 
 def check_win():
     if board[1] == board[2] == board[3] and board[1] != ' ':
@@ -107,6 +109,8 @@ def minimax(board, is_maximizing):
         return -10
     if check_draw():
         return 0
+    if tuple(board) in cache_dict:
+        return cache_dict[tuple(board)]
     if is_maximizing: # computer turn
         best_score = -100
         for index in range(1, len(board)):
@@ -115,6 +119,7 @@ def minimax(board, is_maximizing):
                 score = minimax(board, False)
                 board[index] = " "
                 best_score = max(best_score,score)
+                cache_dict[tuple(board)] = best_score
         return best_score
     # human turn
     best_score = 100
@@ -124,6 +129,7 @@ def minimax(board, is_maximizing):
             score = minimax(board, True)
             board[index] = " "
             best_score = min(best_score,score)
+            cache_dict[tuple(board)] = best_score
     return best_score
 
 
